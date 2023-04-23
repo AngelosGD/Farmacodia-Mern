@@ -1,0 +1,142 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+:root{
+    --fros-blue-color: #0050d5;
+    --light-blue-color: #16c5ff;
+    --dark-color: #202020;
+    --light-gray: #dedede;
+    --dark-gray: #a1a1a0;
+    --light-color: #fff;
+    --poppins-font: 'Poppins', sans-serif;
+    --transition: all 0.3s ease-in-out;
+    --box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2)!important;
+}
+
+.header{
+    min-height: 25vh;
+}
+.moveAbout{
+    margin-top: 0vh;
+}
+.pad{
+    margin-top: 1.5vh;
+}
+/* Section About us -- Sobre Nosotros */
+.section-head h2{
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.border-line{
+    height: .4rem;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: var(--light-gray);
+    position: relative;
+}
+.border-line::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 102px;
+    background-color: var(--light-blue-color);
+}
+.about-left{
+    margin-bottom: 6rem;
+}
+.about-right{
+    margin-top: 16.8rem;
+}
+.about-left .text{
+    font-size: 1.5rem;
+    margin: 3rem 0;
+    line-height: 2.3;
+}
+.about .btn-white{
+    color: var(--dark-gray);
+}
+.about-right .img{
+    width: 100%;
+    background-color: #3983fe;
+    max-width: 500px;
+    position: relative;
+}
+.about-right .img img {
+    padding-top: 10rem;
+    transform: scaleX(1.03);
+    width: 537px;
+    height: 300px;
+}
+.about-right .img::after, .about-right .img::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%
+}
+.about-right .img::after{
+    top: -56px;
+    left: 0;
+    background-color: #0060ff;
+    z-index: -1;
+}
+.about-right .img::before{
+    top: -112px;
+    left: 0;
+    background-color: var(--fros-blue-color);
+    z-index: -2;
+}
+/* Section asociados -- Associations */
+.banner-one{
+    background: linear-gradient(rgba(0, 80, 213, 0.9), rgba(0 ,90,
+    213, 0.85)), url('../assets/images/Banner.png') top/cover no-repeat;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    
+}
+.banner-one .lead{
+   
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+.banner-one .text-sm{
+    font-weight: 500;
+}
+
+
+
+/* Responsive */
+@media(min-width:997px ){
+    .about-inner .container{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+    }
+    .about-left{
+        margin-left: 5vh;
+        text-align: left;
+        margin-top: -10rem;
+    }
+    
+    
+    .border-line::after{
+        left: 0;
+        transform: translateX(0);
+    }
+    .about-right{
+        margin-left: 13.5rem;
+        margin-top: 6rem;
+    }
+   .learn-more{
+        margin-left: 34vh;
+   }
+   
+}
